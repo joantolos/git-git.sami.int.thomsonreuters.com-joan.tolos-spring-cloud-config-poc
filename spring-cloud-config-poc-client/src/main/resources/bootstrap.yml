@@ -1,0 +1,9 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: spring-cloud-config-poc
+  cloud:
+    config:
+      profile: ${NG_ENV}
+      uri: http://localhost:8888

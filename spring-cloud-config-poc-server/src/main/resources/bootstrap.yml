@@ -1,0 +1,20 @@
+server:
+  port: 8888
+spring:
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          searchLocations: classpath:/${NG_ENV}/spring-cloud-config-poc-${NG_ENV}.properties
+        git:
+          uri: https://git.sami.int.thomsonreuters.com/joan.tolos/ngs-config-files.git
+          username: joan.tolos
+          password: '{cipher}37f9a099f119f9b6cb31620afde69668fc6540bda577e85957a1e43d1a9e3255'
+          searchPaths: builddtc,devdtc,local,perfeagan,prodeagan,prodedc,qaeagan,qaedc
+encrypt:
+  key: AllWorkAndNoPlayMakesJackADullBoy
+security:
+  user:
+    password: '{cipher}21e31d0f67c21d545fe22940e0e8cebb2529a115ef5f413b457166f62f2ed5f9'
